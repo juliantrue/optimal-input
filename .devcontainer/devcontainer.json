@@ -1,0 +1,28 @@
+{
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "mounts": [
+    "source=${localEnv:HOME}/.ssh,target=/root/.ssh,type=bind,consistency=cached",
+    "source=/tmp/.X11-unix,target=/tmp/.X11-unix:rw,type=bind"
+  ],
+  "containerEnv": {
+    "DISPLAY": "${localEnv:DISPLAY}",
+    "XAUTHORITY": "${localEnv:XAUTHORITY}"
+  },
+  //"runArgs": ["--platform linux/amd64"],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-azuretools.vscode-docker",
+        "visualstudioexptteam.vscodeintellicode",
+        "github.vscode-pull-request-github",
+        "eamodio.gitlens",
+        "ms-vscode-remote.vscode-remote-extensionpack",
+        "github.vscode-github-actions",
+        "github.copilot"
+      ]
+    }
+  }
+}
