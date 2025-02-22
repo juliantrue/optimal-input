@@ -30,6 +30,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libxrandr2 \
     libxrender1 \
     libxtst6 \
+    ssh \
     wget \
     unzip \
     xdg-utils \
