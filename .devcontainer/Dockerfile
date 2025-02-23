@@ -12,8 +12,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libfontconfig1 \
     libfreetype6 \
     libgl1 \
+    libegl1 \
     libglib2.0-0 \
     libnss3 \
+    libxcb-cursor0 \
     libxcb-icccm4 \
     libxcb-image0 \
     libxcb-keysyms1 \
@@ -30,6 +32,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libxrandr2 \
     libxrender1 \
     libxtst6 \
+    libxdamage1 \
+    libxkbfile1 \
     ssh \
     wget \
     unzip \
